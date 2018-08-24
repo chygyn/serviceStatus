@@ -1,6 +1,6 @@
 Service for creating objects with auto-intcrement id, status and current date.
 Created by spring boot.
-db - MySQL.
+db - MySQL, look for SQLdb in root path.
 
 /task - POST method. Create new object. It returns 200 and ID of created object. When created finished service starts new 
 thread for updating status "running" and current time, then wait 2 mins and updates status with "finished" and current time.
