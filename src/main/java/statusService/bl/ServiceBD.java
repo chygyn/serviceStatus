@@ -32,10 +32,11 @@ public class ServiceBD {
                 PreparedStatement ps = connection.prepareStatement(SQLStrings.createEntity,Statement.RETURN_GENERATED_KEYS);
                 ps.setString(1,entity.getStatus());
                 ps.setString(2,entity.getDate());
+
                 return ps;
             }
         }, holder);
-        Integer id = holder.getKey().intValue();
+        Integer id = (Integer)holder.getKeys().get("id");
         entity.setId(id);
         return entity;
     }
