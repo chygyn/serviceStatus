@@ -5,8 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ServiceApplication {
+    String s="";
 
     public static void main(String[] args) {
+
         SpringApplication.run(ServiceApplication.class, args);
     }
 }
